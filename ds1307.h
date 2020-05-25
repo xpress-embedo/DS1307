@@ -38,6 +38,7 @@ void DS1307_Set_Date( uint8_t year, uint8_t month, uint8_t date );
 void DS1307_Set_Time( uint8_t hour, uint8_t min, uint8_t sec );
 uint8_t BCD2LowerCh( uint8_t bcd_value );
 uint8_t BCD2UpperCh( uint8_t bcd_value );
+uint8_t BCD2Decimal( uint8_t bcd_value );
   
 #ifdef	__cplusplus
 }

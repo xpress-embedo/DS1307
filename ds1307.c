@@ -106,3 +106,17 @@ uint8_t BCD2UpperCh( uint8_t bcd_value )
   temp = temp | 0x30;       // Convert to Character
   return temp;
 }
+
+/**
+ * @brief Convert BCD Data into Decimal Number
+ * @param bcd_value BCD Value
+ * @return Decimal Value
+ */
+uint8_t BCD2Decimal( uint8_t bcd_value )
+{
+  uint8_t decimal;
+  // TODO: check BCD Limits
+  decimal = ((bcd_value & 0xF0) >> 4) * 10 + (bcd_value & 0x0F);
+  return decimal;
+}
+
